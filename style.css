@@ -13,3 +13,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+#contents{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
