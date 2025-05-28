@@ -13,8 +13,10 @@ slider.addEventListener('input', (e) => {
 function makeGrid(){
     for(let i=0; i<gridSize; i++){
         let row = document.createElement("div");
+        row.setAttribute("class", "row");
         for(let j=0; j<gridSize; j++){
             let cell = document.createElement("div");
+            cell.setAttribute("class", "cell");
             row.appendChild(cell);
         }
         sketchPad.appendChild(row);
