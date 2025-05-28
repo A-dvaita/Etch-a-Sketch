@@ -1,4 +1,4 @@
-let gridSize = 0;
+let gridSize = 50;
 let sketchPad = document.querySelector('#sketchPad');
 // fetch value of range selector
 let slider = document.querySelector('#myRange');
@@ -28,4 +28,7 @@ function makeGrid(){
 let setSz = document.querySelector('#setSize');
 setSz.addEventListener('click', (e) => {
     makeGrid();
+    // setSz.addEventListener('click', (e) => {
+    //     location.reload();
+    // });
 });
