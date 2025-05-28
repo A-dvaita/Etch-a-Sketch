@@ -19,3 +19,14 @@ body{
     flex-direction: column;
     gap: 20px;
 }
+
+#settings{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
