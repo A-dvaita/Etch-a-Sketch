@@ -4,6 +4,7 @@ let sketchPad = document.querySelector('#sketchPad');
 let slider = document.querySelector('#myRange');
 let output = document.querySelector('#value');
 output.textContent = slider.value;
+
 slider.addEventListener('input', (e) => {
     output.textContent = `${slider.value}`;
     gridSize = Number(output.textContent);
@@ -23,12 +24,17 @@ function makeGrid(){
     }
 }
 
-// Add functionality to set size of grid button
+
+function clear(){
+        while(sketchPad.firstChild){
+            sketchPad.removeChild(sketchPad.firstChild);
+        }
+}
+
+// Add functionality to "set size of grid" button
 
 let setSz = document.querySelector('#setSize');
 setSz.addEventListener('click', (e) => {
+    clear();
     makeGrid();
-    // setSz.addEventListener('click', (e) => {
-    //     location.reload();
-    // });
 });
