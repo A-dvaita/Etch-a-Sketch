@@ -30,3 +30,11 @@ body{
     gap: 25px;
     justify-content: space-between;
 }
+
+button{
+    font-size: large;
+    font-weight: bold;
+    border-width: 3px;
+    border-color: rgb(9, 163, 79);
+    background-color: blanchedalmond;
+}
