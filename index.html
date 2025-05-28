@@ -11,7 +11,10 @@
     <div id="contents">
     <div id="sketchPad"></div>
     <div id="settings">
-        <span id="size">Grid size selector [x * x]</span>
+        <div class="sizer">
+        <span id="size"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></span>
+        <div>Grid size selector [x * x]</div>
+        </div>
         <span class="buttons">
             <button id="B&W">Black & White</button>
             <button id="Vivid">Vivid</button>
