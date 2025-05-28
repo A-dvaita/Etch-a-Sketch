@@ -12,12 +12,12 @@ slider.addEventListener('input', (e) => {
 
 function makeGrid(){
     for(let i=0; i<gridSize; i++){
-        let div = document.createElement("div");
-        sketchPad.appendChild(div);
+        let row = document.createElement("div");
         for(let j=0; j<gridSize; j++){
-            let div = document.createElement("div");
-            sketchPad.appendChild(div);
+            let cell = document.createElement("div");
+            row.appendChild(cell);
         }
+        sketchPad.appendChild(row);
     }
 }
 
