@@ -24,11 +24,21 @@ function makeGrid(){
     }
 }
 
-
 function clear(){
         while(sketchPad.firstChild){
             sketchPad.removeChild(sketchPad.firstChild);
         }
+}
+
+//function to change background color to black for each cell in class .cell
+
+function bAndW(){
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', (e) => {
+            cell.style.backgroundColor = 'black';
+        });
+    });
 }
 
 // Add functionality to "set size of grid" button
@@ -38,3 +48,14 @@ setSz.addEventListener('click', (e) => {
     clear();
     makeGrid();
 });
+
+//Add functionality to black & white button
+
+let BW = document.querySelector('#BW');
+BW.addEventListener('click', (e) => {
+    bAndW();
+});
+
+// cell.addEventListener('mouseenter', (e) => {
+//     cell.style["backgroundColor: Black"];
+// });
