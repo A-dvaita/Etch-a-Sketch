@@ -1,4 +1,7 @@
 let gridSize = 50;
+let r = 0;
+let g = 0;
+let b = 0;
 let sketchPad = document.querySelector('#sketchPad');
 // fetch value of range selector
 let slider = document.querySelector('#myRange');
@@ -30,13 +33,33 @@ function clear(){
         }
 }
 
-//function to change background color to black for each cell in class .cell
+//Function to change background color to black for each cell in class .cell
 
 function bAndW(){
     let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('mouseenter', (e) => {
             cell.style.backgroundColor = 'black';
+        });
+    });
+}
+
+//function to generate random rgb values
+
+function rgbGen(){
+            r = Math.floor(Math.random() * 256);
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 256);
+        }
+
+//Function to change the background color to a random rgb value for each cell in class .class
+
+function rgb(){
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', (e) => {
+        rgbGen();
+        cell.style.backgroundColor = `rgb(`+r+`,`+g+`,`+b+`)`;
         });
     });
 }
@@ -56,6 +79,9 @@ BW.addEventListener('click', (e) => {
     bAndW();
 });
 
-// cell.addEventListener('mouseenter', (e) => {
-//     cell.style["backgroundColor: Black"];
-// });
+//Add functionality to Vivid button
+
+let vivid = document.querySelector('#Vivid');
+vivid.addEventListener('click', (e) => {
+    rgb();
+});
