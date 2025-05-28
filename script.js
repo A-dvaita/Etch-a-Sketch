@@ -23,7 +23,7 @@ function makeGrid(){
 
 // Add functionality to set size of grid button
 
-// let setSz = document.querySelector('#setSize');
-// setSz.addEventListener('click', (e) => {
-//     makeGrid();
-// });
+let setSz = document.querySelector('#setSize');
+setSz.addEventListener('click', (e) => {
+    makeGrid();
+});
