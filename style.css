@@ -38,3 +38,9 @@ button{
     border-color: rgb(9, 163, 79);
     background-color: blanchedalmond;
 }
+
+.sizer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
