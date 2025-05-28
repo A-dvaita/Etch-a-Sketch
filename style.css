@@ -1,0 +1,7 @@
+#sketchPad{
+    width: 600px;
+    height: 600px;
+    border-color: red;
+    border-style: solid;
+    border-width: 10px;
+}
